@@ -1,0 +1,361 @@
+/* 
+    Document   : main
+    Created on : 14.10.2012, 15:17:59
+    Author     : bolbin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body{
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    font-size: 12pt;
+    background: #F0F1F2 url('../img/common_bg.png') repeat-x;
+    text-align: center;
+}
+/** верхняя полоска*/
+.header_top{
+    height: 30px;
+    width: 100%;
+    background-color: #505050;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.header_top_div{
+    width: 1000px;
+    text-align: right;
+    height: 30px;
+}
+
+/** содержимое*/
+.main_content{
+    width: 1000px;
+    min-width: 1000px;
+    -moz-box-shadow: 5px 5px 15px #B4C0C5, -5px 5px 15px #B4C0C5;
+    -webkit-box-shadow: 5px 5px 15px #B4C0C5, -5px 5px 15px #B4C0C5;
+    box-shadow: 5px 5px 15px #B4C0C5,-5px 5px 15px #B4C0C5;
+    background-color: #fff;
+    font-size: 12pt;
+    font-family: Arial;
+    z-index: 0;
+    margin-bottom: 20px;
+}
+
+.header{
+    height: 380px;
+/*    background: url('../img/bg_header.png') repeat-x;*/
+background: #FDF1EF;
+    background-color: #F9E5E2;
+    padding: 0;
+}
+
+.header_logo{
+    width: 300px;
+    vertical-align: middle;
+    text-align: right;
+    
+}
+
+.company-name {
+	margin-top: 70px; 
+	margin-left: 70px; 
+	font-size: 20pt;  
+	width: 450px;
+	color: #b10102;
+	/*text-align: right;*/
+}
+
+.company-name-full {
+	text-align: right;
+	font-size: 30pt;
+}
+
+.company-name-city {
+	text-align: right;
+	padding-left: 170px;
+}
+
+.company-name-prefix {
+	text-align:left;
+	font-size: 15pt;
+	padding-right: 20px;
+}
+
+
+.header_contacts{
+    background: url('../img/money.png') no-repeat;
+    background-position: bottom right;
+    height: 380px;
+    width: 100%;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.menu{
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    background: #e20408; /* Old browsers */
+    vertical-align: middle;
+    text-align: center;
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UyMDQwOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUzJSIgc3RvcC1jb2xvcj0iIzhmMDIyMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiMTAxMDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #e20408 0%, #8f0222 53%, #b10102 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e20408), color-stop(53%,#8f0222), color-stop(100%,#b10102)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e20408 0%,#8f0222 53%,#b10102 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e20408 0%,#8f0222 53%,#b10102 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e20408 0%,#8f0222 53%,#b10102 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e20408 0%,#8f0222 53%,#b10102 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e20408', endColorstr='#b10102',GradientType=0 ); /* IE6-8 */
+}
+
+
+.menu ul {
+ font-size: 14pt;
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ height: 60px;
+}
+.menu li {
+ display: inline;
+ float: left;
+ width: 25%;
+}
+.menu li a {
+ display: block;
+ padding: 7px 20px;
+ color: #fff;
+ margin-right: 2px;
+ height: 45px;
+ padding-top: 20px;
+ text-decoration: none;
+}
+.menu li a:hover {
+ display: block;
+ color: #cfcfcf;
+ background-color: #96011A;
+ margin-right: 2px;
+ padding-top: 20px;
+ height: 30px;
+ text-decoration: underline;
+}
+.menu li span {
+ display: block;
+ padding: 6px 20px;
+ color: #F3F700;
+ height: 45px;
+ padding-top: 20px;
+}
+
+.main-text-header{
+    font-family: Lucida;
+    font-size: 18pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #B10102;
+    padding-bottom:5px;
+}
+
+.textcontent{
+    font-size: 12pt;
+    text-align: justify;
+    padding: 20px 20px 30px 20px;
+    color: #000;/*#505050;*/
+    line-height: 1.5;
+}
+
+.textcontent a{
+    color: #0E77F7;
+    text-decoration:  none;
+    font-weight: normal;
+}
+
+.textcontent a:hover{
+    color: #0E77F7;
+    text-decoration:  underline;
+    font-weight: normal;
+}
+
+
+.contacts_text{
+    font-size: 16pt;
+    margin-bottom: 15px;
+    padding-top: 5px;
+    font-family: Lucida;
+    font-weight: normal;
+}
+
+.edit_form{
+    margin: 20px;
+}
+
+.edit_form td{
+    padding: 5px;
+    font-size: 11pt;
+}
+
+.edit_form td input[type=text]{
+    border: 1px solid #777777;
+    width: 250px;
+    font-size: 10pt;
+}
+
+.edit_form td input[type=submit]{
+    border: 1px solid #777777;
+    background-color: #777777;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 10pt;
+}
+
+.edit_form td textarea{
+    width: 350px;
+    height: 200px;
+    border: 1px solid #777777;
+    font-size: 10pt;
+    
+}
+
+.small_form_widget{
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #ffffff 0%, #efeeea 100%, #e6ebe3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(100%,#efeeea), color-stop(100%,#e6ebe3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#efeeea 100%,#e6ebe3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #ffffff 0%,#efeeea 100%,#e6ebe3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #ffffff 0%,#efeeea 100%,#e6ebe3 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #ffffff 0%,#efeeea 100%,#e6ebe3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6ebe3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	-webkit-box-shadow: -3px 5px 9px 0px rgba(46, 50, 50, 0.63);
+	-moz-box-shadow:    -3px 5px 9px 0px rgba(46, 50, 50, 0.63);
+	box-shadow:         -3px 5px 9px 0px rgba(46, 50, 50, 0.63);
+
+	border-radius: 5px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 10pt;
+}
+
+.edit_form_small{
+}
+
+.edit_form_small td{
+    padding: 5px;
+    font-size: 10pt;
+}
+
+.edit_form_small td input[type=text]{
+    border: 1px solid #777777;
+    width: 130px;
+    font-size: 10pt;
+}
+
+.edit_form_small td input[type=submit]{
+    border: 1px solid #777777;
+    background-color: #777777;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 10pt;
+}
+
+/** подвал*/
+.bottom{
+    height: 5%;
+    font-size: 9pt;
+    width: 100%;
+    color: #505050;
+}
+
+.contacts_photo{
+    width: 460px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #cfcfcf;
+    margin-bottom: 10px;
+}
+
+.contacts_photo a {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+a.phone_href{
+    color: #0E77F7;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+a.phone_href:hover{
+    color: #0E77F7;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.right_title{
+    color: #000;
+    font-size: 18pt;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-family: Lucida;
+}
+
+.right_contacts{
+    width: 280px;
+    min-height: 300px;
+    font-family: Lucida;
+    padding-top: 30px;
+    font-style: italic;
+    font-size: 14pt;
+    background: url('../img/sticker.jpg') no-repeat;
+}
+
+.right_contacts_leaned{
+    
+    -moz-transform: rotate(-5deg); /*firefox*/
+    -o-transform: rotate(-5deg); /*opera*/
+    -webkit-transform: rotate(-5deg); /*chrome*/
+}
+
+.right_contacts a{
+    text-decoration: none;
+    outline: none;
+}
+
+.socialnets{
+    text-align: center;
+}
+
+.socialnets a{
+    outline: none;
+    text-decoration: none;
+}
+
+.doc_table  {
+	border-collapse: collapse;
+}
+
+.doc_table  td {
+	font-size: 14px;
+	vertical-align: top;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+.doc_table_date{
+	text-align: right;
+}
+
+.doc_table_oldest td{
+}
