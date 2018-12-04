@@ -1,0 +1,118 @@
+HTTP - протокол без боддержки состояния (stateless)
+Request - Response, этим взаимодействие и ограничивается, это и представляет собой завершённую HTTP-транзакцию.
+Проблема - как сохранять состояние в веб-приложении. т.е. как хранить информацию пользователя на протяжении вреени его взаимодействия с приложением.
+Варианты
+ - передавать через URL
+ - cookies
+ - http session
+ 
+Что такое сессия ?
+At the core of the session interface is a table of key and value pairs that are made accessible across browser requests. 
+These pairs can be set to any valid string, as needed by the application making use of the session.
+The "session" is a application/x-www-form-urlencoded string containing these key value pairs, as defined by the HTML specification.
+The session can optionally be encrypted and base64 encoded before being written to the storage mechanism
+
+Сессии могут хрраниться на сервере: 
+sessions are tracked through the use of a session ID that is stored inside a cookie, 
+or extracted from the parameters embedded within the URL query string, as found in a typical GET request. 
+
+или на клиенте:
+In high traffic environments where keeping track of a session on a server is too resource intensive or inconvenient, the option exists to store the contents of the session within a cookie on the client browser instead.
+This has the advantage that minimal resources are required on the server to keep track of sessions, and multiple servers within a server farm have no need to share session information.
+
+Read from a session
+
+Session On
+SessionEnv On
+SessionCookieName session path=/
+SessionHeader X-Replace-Session
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Because http is stateless, in order to associate a request to any other reques, you need a way to store user data between HTTP requests.
+Cookies or URL parameters ( for ex. like http://example.com/myPage?asd=lol&boo=no ) are both suitable ways to transport data between 2 or more request. 
+However they are not good in case you don't want that data to be readable/editable on client side.
+The solution is to store that data server side, give it an "id", and let the client only know (and pass back at every http request) that id. 
+There you go, sessions implemented. Or you can use the client as a convenient remote storage, but you would encrypt the data and keep the secret server-side.
+
+"Session" is the term used to refer to a user's time browsing a web site. 
+It's meant to represent the time between their first arrival at a page in the site until the time they stop using the site. 
+In practice, it's impossible to know when the user is done with the site. 
+In most servers there's a timeout that automatically ends a session unless another page is requested by the same user.
+
+The first time a user connects some kind of session ID is created 
+(how it's done depends on the web server software and the type of authentication/login you're using on the site). 
+Like cookies, this usually doesn't get sent in the URL anymore because it's a security problem. 
+Instead it's stored along with a bunch of other stuff that collectively is also referred to as the session. 
+Session variables are like cookies - they're name-value pairs sent along with a request for a page, 
+and returned with the page from the server - but their names are defined in a web standard.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Server-side sessions are handy and efficient, but can become difficult to handle in conjunction with load-balancing/high-availability systems and 
+are not usable at all in some embedded systems with no storage. The load-balancing problem can be solved by using shared storage or by applying forced
+ peering between each client and a single server in the cluster, although this can compromise system efficiency and load distribution.
+
+A method of using server-side sessions in systems without mass-storage is to reserve a portion of RAM for storage of session data. 
+This method is applicable for servers with a limited number of clients 
+(e.g. router or access point with infrequent or disallowed access to more than one client at a time).
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+http://tomcat.apache.org/tomcat-5.5-doc/config/manager.html#Common_Attributes
+
+Tomcat provides two standard implementations of Manager for use — the default one stores active sessions, 
+while the optional one stores active sessions that have been swapped out 
+(in addition to saving sessions across a restart of Tomcat)
+ in a storage location that is selected via the use of an appropriate Store nested element.
+ 
+The standard implementation of Manager is org.apache.catalina.session.StandardManager.
+
+Parameters: 
+algorithm - Name of the Message Digest algorithm used to calculate session identifiers produced by this Manager. If not specified, the default value is "MD5".
+entropy -  seeding the random number generator used to create session identifiers for this Manager
+maxActiveSessions
+maxInactiveInterval - The initial maximum time interval, in seconds, between client requests before a session is invalidated.This attribute provides the initial value whenever a new session is created, 
+						but the interval may be dynamically varied by a servlet via the setMaxInactiveInterval method of the HttpSession object.
+pathname - Absolute or relative (to the work directory for this Context) pathname of the file in which session state will be preserved across application restarts, if possible. 
+
+Persistent Manager Implementation
+
+The persistent implementation of Manager is org.apache.catalina.session.PersistentManager. 
+In addition to the usual operations of creating and deleting sessions, a PersistentManager has the capability to swap active (but idle) 
+sessions out to a persistent storage mechanism, as well as to save all sessions across a normal restart of Tomcat. 
+The actual persistent storage mechanism used is selected by your choice of a Store element nested inside the Manager element - this is required for use of 
+PersistentManager.
+
+maxIdleBackup	
+The time interval (in seconds) since the last access to a session before it is eligible for being persisted to the session store, or -1 to disable this feature. By default, this feature is disabled.
+
+maxIdleSwap	
+The time interval (in seconds) since the last access to a session before it should be persisted to the session store, and passivated out of the server's memory, or -1 to disable this feature. If this feature is enabled, the time interval specified here should be equal to or longer than the value specified for maxIdleBackup. By default, this feature is disabled.
+
+If you are using the Persistent Manager Implementation as described above, you MUST nest a 
+<Store> element inside, which defines the characteristics of the persistent data storage. 
+Two implementations of the <Store> element are currently available, with different characteristics, as described below.
+
+The File Based Store 
+implementation saves swapped out sessions in individual files (named based on the session identifier) in a configurable directory. 
+Therefore, you are likely to encounter scalability problems as the number of active sessions increases, and this should primarily be considered a
+ means to easily experiment.
+
+To configure this, add a <Store> nested inside your <Manager> element with the following attributes:
+
+checkInterval	
+The interval (in seconds) between checks for expired sessions among those sessions that are currently swapped out. By default, this interval is set to 60 seconds (one minute).
+
+className	
+Java class name of the implementation to use. This class must implement the org.apache.catalina.Store interface. You must specify org.apache.catalina.session.FileStore to use this implementation.
+
+directory	
+Absolute or relative (to the temporary work directory for this web application) pathname of the directory into which individual session files are written. If not specified, the temporary work directory assigned by the container is utilized.
+
+
+JDBC Based Store
+
+The JDBC Based Store implementation saves swapped out sessions in individual rows of a 
+preconfigured table in a database that is accessed via a JDBC driver. 
+With large numbers of swapped out sessions, this implementation will exhibit improved performance over the File Based Store described above.

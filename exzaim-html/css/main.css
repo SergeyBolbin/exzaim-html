@@ -155,13 +155,23 @@ background: #FDF1EF;
  padding-top: 20px;
 }
 
-.main-text-header{
+.main-text-header {
     font-family: Lucida;
     font-size: 18pt;
     font-weight: bold;
     font-style: italic;
     color: #B10102;
     padding-bottom:5px;
+}
+
+.small-text-header {
+    font-family: Lucida;
+    font-size: 14pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #B10102;
+    padding-bottom:15px;
+    padding-top:10px;
 }
 
 .textcontent{
@@ -263,8 +273,16 @@ background: #FDF1EF;
 
 .edit_form_small td input[type=submit]{
     border: 1px solid #777777;
-    background-color: #777777;
+    background-color:  #777777;
     color: #fff;
+    border-radius: 3px;
+    font-size: 10pt;
+}
+
+.edit_form_small td input[type=submit][disabled]{
+    border: 1px solid #777777;
+    color: #777777;
+	background-color: transparent;
     border-radius: 3px;
     font-size: 10pt;
 }
@@ -358,4 +376,15 @@ a.phone_href:hover{
 }
 
 .doc_table_oldest td{
+}
+
+.doc_table_no_border  {
+	border-collapse: collapse;
+}
+
+.doc_table_no_border  td {
+	font-size: 14px;
+	vertical-align: middle;
+	padding: 2px;
+	border: none
 }
