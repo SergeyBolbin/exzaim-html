@@ -1,0 +1,171 @@
+[13-May-2018 16:29:25 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:29:25 UTC] PHP Warning:  mysql_connect(): Access denied for user 'u928199569_zaim'@'10.2.1.27' (using password: YES) in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:55 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:55 UTC] PHP Warning:  mysql_connect(): Access denied for user 'u928199569_zaim'@'10.2.1.27' (using password: YES) in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:56 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:56 UTC] PHP Warning:  mysql_connect(): Access denied for user 'u928199569_zaim'@'10.2.1.27' (using password: YES) in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:57 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:57 UTC] PHP Warning:  mysql_connect(): Access denied for user 'u928199569_zaim'@'10.2.1.27' (using password: YES) in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:59 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:59 UTC] PHP Warning:  mysql_connect(): Access denied for user 'u928199569_zaim'@'10.2.1.27' (using password: YES) in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:59 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:31:59 UTC] PHP Warning:  mysql_connect(): Access denied for user 'u928199569_zaim'@'10.2.1.27' (using password: YES) in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:32:01 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:32:01 UTC] PHP Warning:  mysql_connect(): Access denied for user 'u928199569_zaim'@'10.2.1.27' (using password: YES) in /home/u928199569/public_html/admin/index.php on line 3
+[13-May-2018 16:33:03 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 4
+[13-May-2018 16:33:10 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/u928199569/public_html/admin/index.php on line 4
+[13-May-2018 16:37:57 UTC] PHP Parse error:  syntax error, unexpected 'catch' (T_CATCH) in /home/u928199569/public_html/admin/index.php on line 44
+[13-May-2018 16:48:09 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/u928199569/public_html/admin/index.php on line 2
+[13-May-2018 16:48:10 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/u928199569/public_html/admin/index.php on line 2
+[13-May-2018 18:03:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:22
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(22): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(3): dbFetchAllPrimaryFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 22
+[13-May-2018 18:04:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:04:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:04:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:04:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:04:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:04:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:06:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:06:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:06:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:06:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 18:06:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL ORDER BY position' at line 1' in /home/u928199569/public_html/admin/dao.php:28
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(28): PDO->query('SELECT * FROM e...')
+#1 /home/u928199569/public_html/admin/index.php(4): dbFetchAllAttachmentFiles()
+#2 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 28
+[13-May-2018 19:07:12 UTC] PHP Fatal error:  Call to undefined function pdoSet() in /home/u928199569/public_html/admin/dao.php on line 64
+[13-May-2018 19:25:56 UTC] PHP Parse error:  syntax error, unexpected '$btn_down_text' (T_VARIABLE) in /home/u928199569/public_html/admin/index.php on line 43
+[13-May-2018 19:25:57 UTC] PHP Parse error:  syntax error, unexpected '$btn_down_text' (T_VARIABLE) in /home/u928199569/public_html/admin/index.php on line 43
+[13-May-2018 19:36:35 UTC] PHP Fatal error:  Call to undefined function dbFetchAllPrimaryFiles() in /home/u928199569/public_html/admin/index.php on line 24
+[13-May-2018 20:15:13 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/u928199569/public_html/admin/controller.php on line 23
+[13-May-2018 20:15:45 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/u928199569/public_html/admin/controller.php on line 24
+[13-May-2018 20:40:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''title', 'filename', 'type', 'doc_date', 'created_by', 'parent_id', 'position') ' at line 1' in /home/u928199569/public_html/admin/dao.php:58
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(58): PDO->prepare('INSERT INTO ez_...')
+#1 /home/u928199569/public_html/admin/controller.php(39): dfCreateFile('test 3', 'test 3 file', 'doc', '13.05.2018', 'admin')
+#2 /home/u928199569/public_html/admin/controller.php(13): actionCreate()
+#3 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 58
+[13-May-2018 20:52:56 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/u928199569/public_html/admin/controller.php on line 48
+[14-May-2018 04:55:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'filename' cannot be null' in /home/u928199569/public_html/admin/dao.php:66
+Stack trace:
+#0 /home/u928199569/public_html/admin/dao.php(66): PDOStatement->execute()
+#1 /home/u928199569/public_html/admin/controller.php(43): dfCreateFile('33333', NULL, 'doc', '14.05.2018', 'admin')
+#2 /home/u928199569/public_html/admin/controller.php(17): actionCreate()
+#3 {main}
+  thrown in /home/u928199569/public_html/admin/dao.php on line 66
+[14-May-2018 05:00:55 UTC] PHP Warning:  POST Content-Length of 12599885 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 05:00:59 UTC] PHP Warning:  POST Content-Length of 12599885 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 05:01:04 UTC] PHP Warning:  POST Content-Length of 12599885 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 05:01:04 UTC] PHP Warning:  POST Content-Length of 12599885 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 05:01:05 UTC] PHP Warning:  POST Content-Length of 12599885 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 05:01:05 UTC] PHP Warning:  POST Content-Length of 12599885 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 05:01:05 UTC] PHP Warning:  POST Content-Length of 12599984 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 05:12:25 UTC] PHP Warning:  move_uploaded_file(/doc/uploads/): failed to open stream: No such file or directory in /home/u928199569/public_html/admin/controller.php on line 65
+[14-May-2018 05:12:25 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpMoVB9P' to '/doc/uploads/' in /home/u928199569/public_html/admin/controller.php on line 65
+[14-May-2018 05:14:05 UTC] PHP Warning:  move_uploaded_file(/doc/uploads/): failed to open stream: No such file or directory in /home/u928199569/public_html/admin/controller.php on line 66
+[14-May-2018 05:14:05 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php5mUuO9' to '/doc/uploads/' in /home/u928199569/public_html/admin/controller.php on line 66
+[14-May-2018 05:15:07 UTC] PHP Warning:  move_uploaded_file(/doc/uploads/1111Engineering_and_education.docx): failed to open stream: No such file or directory in /home/u928199569/public_html/admin/controller.php on line 66
+[14-May-2018 05:15:07 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpnx3QMc' to '/doc/uploads/1111Engineering_and_education.docx' in /home/u928199569/public_html/admin/controller.php on line 66
+[14-May-2018 05:46:48 UTC] PHP Warning:  move_uploaded_file(../doc/uploads/../doc/uploads/JavaReferences.txt): failed to open stream: No such file or directory in /home/u928199569/public_html/admin/controller.php on line 85
+[14-May-2018 05:46:48 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpSlfwG5' to '../doc/uploads/../doc/uploads/JavaReferences.txt' in /home/u928199569/public_html/admin/controller.php on line 85
+[14-May-2018 05:48:43 UTC] PHP Warning:  POST Content-Length of 12599885 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 05:52:07 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 53
+[14-May-2018 05:52:07 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 54
+[14-May-2018 05:52:21 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 53
+[14-May-2018 05:52:21 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 54
+[14-May-2018 05:55:59 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 53
+[14-May-2018 05:55:59 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 54
+[14-May-2018 05:58:14 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 53
+[14-May-2018 05:58:14 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 55
+[14-May-2018 05:58:41 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 54
+[14-May-2018 05:58:41 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 56
+[14-May-2018 05:59:30 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 54
+[14-May-2018 05:59:30 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 56
+[14-May-2018 06:01:56 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 53
+[14-May-2018 06:01:56 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 54
+[14-May-2018 06:02:14 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 53
+[14-May-2018 06:02:14 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 54
+[14-May-2018 06:37:33 UTC] PHP Parse error:  syntax error, unexpected 'FILE_UPLOAD_DIR' (T_STRING), expecting ',' or ';' in /home/u928199569/public_html/admin/index.php on line 59
+[14-May-2018 06:37:34 UTC] PHP Parse error:  syntax error, unexpected 'FILE_UPLOAD_DIR' (T_STRING), expecting ',' or ';' in /home/u928199569/public_html/admin/index.php on line 59
+[14-May-2018 06:41:30 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 45
+[14-May-2018 06:41:30 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 46
+[14-May-2018 06:43:03 UTC] PHP Warning:  POST Content-Length of 9976338 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-May-2018 06:46:42 UTC] PHP Warning:  POST Content-Length of 9976340 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[15-May-2018 18:30:27 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 57
+[15-May-2018 18:30:27 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:27:33 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 57
+[20-May-2018 14:27:33 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:33:31 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 57
+[20-May-2018 14:33:31 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:33:31 UTC] PHP Warning:  Illegal string offset 'file_uploaded' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:36:48 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 57
+[20-May-2018 14:36:48 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:36:48 UTC] PHP Warning:  Illegal string offset 'file_uploaded' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:40:40 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 57
+[20-May-2018 14:40:40 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:40:40 UTC] PHP Warning:  Illegal string offset 'file_uploaded' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:50:14 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:50:14 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 60
+[20-May-2018 14:57:28 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:57:28 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 60
+[20-May-2018 14:57:31 UTC] PHP Warning:  Illegal string offset 'success' in /home/u928199569/public_html/admin/controller.php on line 58
+[20-May-2018 14:57:31 UTC] PHP Warning:  Illegal string offset 'file' in /home/u928199569/public_html/admin/controller.php on line 60
+[06-Jul-2018 12:55:31 UTC] PHP Warning:  file_put_contents(/doc/uploads/code.txt): failed to open stream: No such file or directory in /home/u928199569/public_html/callback.php on line 4
+[06-Jul-2018 12:55:31 UTC] PHP Warning:  readfile(/doc/uploads/code.txt): failed to open stream: No such file or directory in /home/u928199569/public_html/callback.php on line 7

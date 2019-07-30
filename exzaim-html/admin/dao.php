@@ -19,7 +19,7 @@
 	
 	function dbFetchPrimaryFiles($visibility) {
 		$pdo = mysqlConnect();
-		$stmt = $pdo -> prepare('SELECT * FROM ez_document WHERE parent_id IS NULL AND visible = :visibility  ORDER BY position');
+		$stmt = $pdo -> prepare('SELECT * FROM ez_document WHERE parent_id IS NULL AND visible = :visibility  ORDER BY position, title');
 		$stmt -> bindParam(':visibility', $visibility, PDO::PARAM_INT);
 		$stmt -> execute();
 		$res = $stmt -> fetchAll();
@@ -42,21 +42,11 @@
 		$stmt -> execute();
 		return $stmt -> fetch();
 	}
-	
-	function dbCountFiles() {
+
+	function dbCreateFile($title, $filename, $type, $doc_date, $created_by, $parent_id = null) {
 		$pdo = mysqlConnect();
-		$stmt = $pdo -> prepare('SELECT COUNT(*) as `count` FROM ez_document');
-		$stmt -> execute();
-		$res = $stmt -> fetch();
-		$pdo = null;
-		return $res['count'];
-	}
-	
-	
-	function dfCreateFile($title, $filename, $type, $doc_date, $created_by, $parent_id = null) {
-		$pdo = mysqlConnect();
-		$position = dbCountFiles() + 1;
-		
+		$position = _dbGetMaxPos() + 1;
+
 		$sql = "INSERT INTO ez_document (`title`, `filename`, `type`, `doc_date`, `created_by`, `parent_id`, `position`) 
 					VALUES (:title, :filename, :type, :doc_date, :created_by, :parent_id, :position) ";
 		
@@ -74,8 +64,6 @@
 	
 	function dbUpdateFile($id, $title, $filename, $type, $doc_date, $created_by, $parent_id = null) {
 		$pdo = mysqlConnect();
-		$values = array($title, $filename, $type, $doc_date, $created_by, $parent_id, $position);
-		
 		$sql_file_name = $filename != "" ? "filename=:filename," : "";
 		
 		$sql = "UPDATE ez_document 
@@ -100,25 +88,55 @@
 		$stm->execute();
 		$pdo = null;
 	}
-	
-	
+
 	function dbDeleteFile($id) {
 		$pdo = mysqlConnect();
-		$values = array($title, $filename, $type, $doc_date, $created_by, $parent_id, $position);
-		
-		$sql = "DELETE ez_document WHERE id = :id OR parent_id = :id";
+
+		$sql = "DELETE FROM ez_document WHERE id = :id OR parent_id = :pid";
 		$stm = $pdo -> prepare($sql);
 		$stm -> bindParam(':id', $id, PDO::PARAM_INT);
+		$stm -> bindParam(':pid', $id, PDO::PARAM_INT);
+
 		$stm -> execute();
 		$pdo = null;
 	}
-	
-	function dbChangeVisibility($id, $visibility) {
+
+	function dbSetVisible($id) {
+	    $pos = _dbGetMaxPos() + 1;
+	    _dbChangeVisibility($id, 1, $pos);
+	}
+
+	function dbSetInvisible($id) {
+    	_dbChangeVisibility($id, 0, 0);
+    }
+
+    function dbUpFiles($pos) {
+        $pdo = mysqlConnect();
+        $sql = "UPDATE ez_document SET position = position - 1 WHERE position > :pos";
+        $stm = $pdo -> prepare($sql);
+        $stm -> bindParam(':pos', $pos, PDO::PARAM_INT);
+        $stm -> execute();
+        $pdo = null;
+    }
+
+	function _dbGetMaxPos() {
+	    $pdo = mysqlConnect();
+        $sql = "SELECT MAX(position) AS `pos` FROM ez_document";
+        $stmt = $pdo -> prepare($sql);
+        $stmt -> execute();
+	    $res = $stmt -> fetch();
+        $pdo = null;
+
+	    return $res["pos"];
+	}
+
+	function _dbChangeVisibility($id, $visibility, $pos) {
 		$pdo = mysqlConnect();
-		$sql = "UPDATE ez_document SET visible = :visibility WHERE id = :id";
+		$sql = "UPDATE ez_document SET visible = :visibility, position = :pos WHERE id = :id";
 		$stm = $pdo -> prepare($sql);
-		$stm -> bindParam(':visibility', $visibility, PDO::PARAM_INT); 
-		$stm -> bindParam(':id', $id, PDO::PARAM_INT); 
+		$stm -> bindParam(':visibility', $visibility, PDO::PARAM_INT);
+		$stm -> bindParam(':id', $id, PDO::PARAM_INT);
+		$stm -> bindParam(':pos', $pos, PDO::PARAM_INT);
 		$stm -> execute();
 		$pdo = null;
 	}

@@ -5,6 +5,7 @@
 	$id = $_GET['id'];
 	$title_text = "Создать документ";
 	$action = "create";
+
 	if (isset($id) && $id != "") {
 		$file = dbFetchFile($id);
 		$title = $file['title'];

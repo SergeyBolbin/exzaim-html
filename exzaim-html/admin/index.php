@@ -20,11 +20,12 @@
 <body>
 	<h2>Видимые документы</h2>
 	<?php 
-		renderFilesTable(dbFetchPrimaryFiles(1)); 
+		renderFilesTable(dbFetchPrimaryFiles(1));
 	?>
+
 	<h2>Архив (скрытые документы)</h2>
 	<?php 
-		renderFilesTable(dbFetchPrimaryFiles(0)); 
+		renderFilesTable(dbFetchPrimaryFiles(0));
 	?>
 	
 	<form method="POST" action="controller.php">
@@ -32,7 +33,7 @@
 	</form>
 </body>
 <?php 
-	function renderFilesTable($primaryFiles) {
+	function renderFilesTable($fileRecords) {
 		echo "<table border=1>
 				<tr>
 					<td>&nbsp;</td>
@@ -44,12 +45,12 @@
 					<td>Действия</td>
 				</tr>";
 		
-		$last_index_of_primary = count($primaryFiles) - 1;
-		foreach ($primaryFiles as  $idx => $primary) {
+		$lastIndex = count($fileRecords) - 1;
+		foreach ($fileRecords as  $idx => $primary) {
 			$visible = $primary['visible'] > 0;
-			$visible_action_text = $visible ? 'Скрыть на сайте' : 'Отобразить на сайте';
-			$btn_up_text = ($idx != 0) ? "<input name=\"up\" type=\"submit\" value=\"Выше\">&nbsp;" : "";
-			$btn_down_text = ($idx != $last_index_of_primary) ? "<input name=\"down\" type=\"submit\" value=\"Ниже\">&nbsp;" : "";
+			$visibleActionText = $visible ? 'Скрыть на сайте' : 'Отобразить на сайте';
+			$btnUpHtml = ($idx != 0) ? "<input name=\"up\" type=\"submit\" value=\"Выше\">&nbsp;" : "";
+			$btnDownHtml = ($idx != $lastIndex) ? "<input name=\"down\" type=\"submit\" value=\"Ниже\">&nbsp;" : "";
 			
 			echo "<tr>
 					<td><input type=\"checkbox\"></td>
@@ -61,14 +62,16 @@
 					<td>
 						<form method='POST' action='./controller.php'>
 							<input name=\"edit_form\" type=\"submit\" value=\"Изменить\">&nbsp;
-							<input name=\"vis\" type=\"submit\" value=\"$visible_action_text\">&nbsp;
-							$btn_up_text 
-							$btn_down_text
+							<input name=\"vis\" type=\"submit\" value=\"$visibleActionText\">&nbsp;
+							<input name=\"delete\" type=\"submit\" value=\"Удалить\">&nbsp;
+							$btnUpHtml
+							$btnDownHtml
 							<input type=\"hidden\" name=\"id\" value=".$primary['id'].">
 							<input type=\"hidden\" name=\"visible\" value=".$primary['visible'].">
+							<input type=\"hidden\" name=\"position\" value=".$primary['position'].">
 						</form>
 					</td>
-				</tr>";	
+				</tr>";
 		}
 		
 		echo "</table>";
