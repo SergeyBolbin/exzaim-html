@@ -4,7 +4,7 @@
 ?>
 <html>
 <head>
-	<title>ООО МКК "ЭкспрессЗайм", р.п. Вознесенское. Информация</title>
+	<title>ООО "ЭкспрессЗайм", р.п. Вознесенское. Информация</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 	<link rel="stylesheet" href="css/clock.css" type="text/css">
 	<script type="text/javascript" src="javascript/jquery-1.2.6.min.js"></script>
